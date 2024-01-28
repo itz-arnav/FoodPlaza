@@ -87,11 +87,40 @@
     filter: brightness(0.95);
 }
 
-
-@media screen and (max-width: 800px) {
-    
+@media screen and (max-width: 500px) {
     .headerNavListSection{
         display: none ;
+    }
+
+    .headerLoginSection{
+        gap: 0.1rem;
+    }
+
+    .logoImage{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .logoText{
+        font-size: 1rem;
+    }
+
+    .loginButton{
+        padding: 0.5rem 1rem;
+    }    
+
+    .signupButton{
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .headerNavListSection{
+        display: none ;
+    }
+
+    .headerLoginSection{
+        gap: 0.7rem;
     }
 }
 
