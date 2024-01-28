@@ -112,6 +112,10 @@
         text-align: center;
     }
 
+    .smallTextDesc{
+        text-align: center;
+    }
+
     .heroRight{
         display: none;
     }
