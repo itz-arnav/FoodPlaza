@@ -1,6 +1,119 @@
+/* HERO SECTION */
+
 .heroSectionContainer{
     margin-top: 2rem;
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 0 6rem;
+}
+
+/* HERO LEFT SECTION */
+.heroLeft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.smallTopText{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.largeCatchText{
+    margin-top: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.3rem;
+}
+
+.redText{
+    color: #ef4f5f;
+}
+
+.smallTextDesc{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #777;
+}
+
+.buttonSection{
+    margin-top: 2rem;
+    display: flex;
     align-items: center;
+    gap: 1.3rem;
+}
+
+.orderNowButton{
+    color: #fff;
+    background-color: #1E1E1E;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.findRestaurantsButton{
+    color: #fff;
+    background-color: #ef4f5f;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.orderNowButton:hover, .findRestaurantsButton:hover{
+    cursor: pointer;
+    filter: brightness(0.95);
+}
+
+
+/* HERO RIGHT */
+
+.heroImage{
+    height: 35rem;
+}
+
+@media screen and (max-width:1120px) {
+    .heroSectionContainer{
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .heroSectionContainer{
+        padding: 0 1rem;
+    }
+    .heroImage{
+        height: 29rem;
+    }
+
+    .buttonSection{
+        gap: 0.4rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .heroSectionContainer{
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heroLeft{
+        margin-top: 1rem;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .largeCatchText{
+        text-align: center;
+    }
+
+    .heroRight{
+        display: none;
+    }
+
 }
