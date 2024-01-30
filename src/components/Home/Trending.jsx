@@ -21,19 +21,19 @@ const Trending = () => {
     infinite: true,
     speed: 300,
     slidesToShow: 4,
-    // autoplay: true,
+    autoplay: true,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -41,7 +41,7 @@ const Trending = () => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

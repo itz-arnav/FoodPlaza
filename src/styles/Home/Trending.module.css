@@ -58,7 +58,59 @@
 }
 
 .slider{
-    width: 70%;
+    width: 80%;
+}
+
+@media screen and (max-width: 1250px){
+    .slider{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .slider{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .slider{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .trendingCardSection{
+        gap: 0.4rem;
+    }
+
+    .slider{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .slider{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .slider{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .slider{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .slider{
+        width: 75%;
+    }
 }
 
 .arrowBtn{
