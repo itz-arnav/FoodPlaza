@@ -4,6 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/Home/slickOptions.css";
+import Noodle from "/noodles.png";
+import Chicken from "/chicken.png";
+import Salad from "/salad.png";
+
 import { FaAngleLeft , FaAngleRight } from 'react-icons/fa6';
 
 
@@ -64,17 +68,40 @@ const Trending = () => {
         </button>
 
           <Slider {...settings} ref={sliderRef} className={css.slider}>
-            <div className={css.box}>
-              1
+            <div className={css.sliderCard}>
+              <img src={Noodle} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Noodles</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
             </div>
-            <div className={css.box}>
-              2
+            <div className={css.sliderCard}>
+              <img src={Chicken} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Chicken</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
             </div>
-            <div className={css.box}>
-              3
+            <div className={css.sliderCard}>
+              <img src={Salad} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Salad</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
             </div>
-            <div className={css.box}>
-              4
+            <div className={css.sliderCard}>
+              <img src={Noodle} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Noodles</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
+            </div>
+            <div className={css.sliderCard}>
+              <img src={Salad} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Salad</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
+            </div>
+            <div className={css.sliderCard}>
+              <img src={Noodle} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Noodles</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
+            </div>
+            <div className={css.sliderCard}>
+              <img src={Chicken} alt="" className={css.sliderImg}/>
+              <div className={css.sliderTitleText}>Chicken</div>
+              <div className={css.sliderTextDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, commodi?</div>
             </div>
           </Slider>
 
