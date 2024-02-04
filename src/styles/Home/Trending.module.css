@@ -110,6 +110,11 @@
     align-items: center;
     justify-content: center;
     color: #555;
+    transition: all 250ms ease-in-out;
+}
+
+.arrowBtn:hover{
+    color: #ef4f5f;
 }
 
 .sliderCard{
