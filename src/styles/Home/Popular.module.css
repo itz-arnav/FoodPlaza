@@ -23,23 +23,42 @@
     color: #777;
 }
 
+.PopularTabContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .popularTabSection{
+    width: 95%;
     margin-top: 1rem;
     margin-bottom: 2rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
-    gap: 2.2rem;
+    gap: 2rem;
+    overflow-x: auto;
 }
 
 .tabItem{
-    width: 8rem;
-    height: 2.6rem;
+    min-width: 8rem;
+    min-height: 2.8rem;
     background-color: #eee;
     border-radius: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 300ms ease-in-out;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 809px) {
+    .popularTabSection{
+        gap: 0.9rem;
+        justify-content: flex-start;
+    }
 }
 
 .tabItem:hover{
@@ -76,7 +95,10 @@
     object-fit: cover;
     border-radius: 0.7rem;
 }
-
+.popularItemTitle{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
 .knowMoreButton{
     color: #fff;

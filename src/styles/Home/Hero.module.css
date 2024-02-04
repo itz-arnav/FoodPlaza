@@ -1,8 +1,15 @@
 /* HERO SECTION */
 
+.heroSectionWrapper{
+    width: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .heroSectionContainer{
     margin-top: 2rem;
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     padding: 0 6rem;
@@ -35,8 +42,14 @@
     color: #ef4f5f;
 }
 
+.smallTextWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 .smallTextDesc{
-    font-size: 0.9rem;
+    width: 75%;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #777;
 }
@@ -73,12 +86,16 @@
 /* HERO RIGHT */
 
 .heroImage{
-    height: 35rem;
+    height: 36rem;
 }
 
-@media screen and (max-width:1120px) {
+@media screen and (max-width:1180px) {
     .heroSectionContainer{
         padding: 0 1rem;
+        width: 100%;
+    }
+    .smallTextDesc{
+        width: 90%;
     }
 }
 
@@ -115,10 +132,12 @@
 
     .smallTextDesc{
         text-align: center;
+        width: 100%;
     }
 
     .heroRight{
         display: none;
     }
+
 
 }
