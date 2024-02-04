@@ -1,0 +1,93 @@
+
+.popularContainer{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.3rem;
+    user-select: none;
+}
+
+.popularTitleSection{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.popularDescription{
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.popularTabSection{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 2.2rem;
+}
+
+.tabItem{
+    width: 8rem;
+    height: 2.6rem;
+    background-color: #eee;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+}
+
+.tabItem:hover{
+    cursor: pointer;
+    filter: brightness(0.97);
+}
+
+.activeTabItem{
+    background-color: #ef4f5f;
+    color: #fff;
+}
+
+.popularDataSection{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.popularDataItemContainer{
+    width: 10rem;
+    min-height: 13rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+.popularItemImage{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.7rem;
+}
+
+
+.knowMoreButton{
+    color: #fff;
+    background-color: #ef4f5f;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease-in-out;
+    margin-top: 2rem;
+}
+
+.knowMoreButton:hover{
+    cursor: pointer;
+    filter: brightness(0.95);
+}
