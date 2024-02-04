@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Hero from '../components/Home/Hero'
 import Trending from '../components/Home/Trending'
 import Popular from '../components/Home/Popular'
+import Contact from '../components/Home/Contact'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Hero />
         <Trending />
         <Popular />
+        <Contact />
     </>
   )
 }
