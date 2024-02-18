@@ -4,6 +4,7 @@ import Hero from '../components/Home/Hero'
 import Trending from '../components/Home/Trending'
 import Popular from '../components/Home/Popular'
 import Contact from '../components/Home/Contact'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Trending />
         <Popular />
         <Contact />
+        <Footer />
     </>
   )
 }

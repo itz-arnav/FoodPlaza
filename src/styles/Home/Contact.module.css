@@ -70,6 +70,66 @@
     font-size: 1rem;
 }
 
+@media screen and (max-width:1180px) {
+
+    .leftSection{
+        width: 70%;
+    }
+
+    .submitEmail{
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width:1048px) {
+
+    .submitSection{
+        flex-direction: column;
+    }
+
+    .submitEmail{
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .contactSection{
+        width: 85%;
+    }
+
+    .leftSection{
+        display: none;
+    }
+
+    .submitSection{
+        flex-direction: row;
+    }
+
+    .submitEmail{
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .contactSection{
+        width: 90%;
+    }
+
+    .leftSection{
+        display: none;
+    }
+
+    .submitSection{
+        flex-direction: column;
+    }
+
+    .submitEmail{
+        font-size: 0.95rem;
+    }
+}
+
 .submitButton{
     color: #fff;
     background-color: #ef4f5f;
