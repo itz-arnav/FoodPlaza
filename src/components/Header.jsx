@@ -1,8 +1,19 @@
 import React from 'react'
 import css from "../styles/Header.module.css"
 import Logo from "/pad-thai.png";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleClickLogin = () => {
+    navigate("/login");
+  }
+
+  const handleClickSignup = () => {
+    navigate("/signup");
+  }
+  
   return (
     <>
         <div className={css.headerContainer}>
@@ -21,8 +32,8 @@ const Header = () => {
           </ul>
 
           <div className={css.headerLoginSection}>
-            <div className={css.loginButton}>Login</div>
-            <div className={css.signupButton}>Sign Up</div>
+            <div className={css.loginButton} onClick={handleClickLogin}>Login</div>
+            <div className={css.signupButton} onClick={handleClickSignup}>Sign Up</div>
           </div>
 
         </div>

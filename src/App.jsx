@@ -7,6 +7,7 @@ import { useAuth } from './context/AuthContext';
 import Login from './views/Login';
 import Home from './views/Home';
 import "./styles/App.css";
+import Signup from './views/SignUp';
 function App() {
   const { isAuthenticated } = useAuth();
 
@@ -14,7 +15,10 @@ function App() {
     <Router>
       <ToastContainer />
       <Routes>
-        <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} />
+        {/* <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} /> */}
+        <Route path="/login" element={ <Login />} />
+        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <Signup />} /> */}
+        <Route path="/signup" element={ <Signup />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

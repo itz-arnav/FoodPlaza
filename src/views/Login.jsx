@@ -1,14 +1,9 @@
 import React from 'react'
+import css from "../styles/Login/Login.module.css";
 
 const Login = () => {
   return (
-    <>
-        {/* HEADER */}
-
-        {/* HERO */}
-
-        {/* FOOTER */}
-    </>
+    <div>Login</div>
   )
 }
 

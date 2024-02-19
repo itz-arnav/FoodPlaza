@@ -36,11 +36,45 @@
     font-weight: 600;
     font-size: 3rem;
     line-height: 3.3rem;
+
+    background: #000;
+    background-color: #000;
+    background-image: radial-gradient(circle,#c058ff 0,#ff5858 26%,#000 27%);
+    background-position: 100% 100%;
+    background-size: 150%;
+    -webkit-animation-name: bg-circle;
+    animation-name: bg-circle;
+    -webkit-animation-duration: 10s;
+    animation-duration: 6s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.redText{
-    color: #ef4f5f;
+@keyframes bg-circle {
+    0% {
+        background-size: 350%;
+        background-position: left 100% bottom 0;
+    }
+    50% {
+        background-size: 350%;
+        background-position: left -10% bottom 0;
+    }
+    100% {
+        background-size: 350%;
+        background-position: left 100% bottom 0;
+    }
 }
+
+/* .redText{
+    color: #ef4f5f;
+} */
 
 .smallTextWrapper{
     width: 100%;
