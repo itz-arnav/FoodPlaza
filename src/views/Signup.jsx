@@ -46,7 +46,9 @@ const Signup = () => {
                         <hr className={css.separateHR} />
                     </div>
                     <div className={css.signupSocialMedia}>
-                        
+                        <div className={css.signUpSocialContainer}>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
