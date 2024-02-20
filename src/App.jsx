@@ -7,7 +7,7 @@ import { useAuth } from './context/AuthContext';
 import Login from './views/Login';
 import Home from './views/Home';
 import "./styles/App.css";
-import SignUp from './views/Signup';
+import SignupPage from './views/SignupPage';
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -18,8 +18,8 @@ function App() {
       <Routes>
         {/* <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} /> */}
         <Route path="/login" element={ <Login />} />
-        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <SignUp />} /> */}
-        <Route path="/signup" element={ <SignUp />} />
+        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <SignupPage />} /> */}
+        <Route path="/signup" element={ <SignupPage />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
