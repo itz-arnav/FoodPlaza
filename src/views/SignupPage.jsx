@@ -1,5 +1,5 @@
 import React from 'react'
-import css from "../styles/SignUp/SignUp.module.css";
+import css from "../styles/SignupPage/SignupPage.module.css";
 import CompanyLogo from "/pad-thai.png";
 import { useNavigate } from 'react-router-dom';
 
