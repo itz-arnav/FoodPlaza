@@ -3,6 +3,7 @@ import css from "../styles/SignUp/SignUp.module.css";
 import CompanyLogo from "/pad-thai.png";
 import { useNavigate } from 'react-router-dom';
 
+
 const SignUp = () => {
 
     const navigate = useNavigate();
