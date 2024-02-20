@@ -18,8 +18,8 @@ function App() {
       <Routes>
         {/* <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} /> */}
         <Route path="/login" element={ <Login />} />
-        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <Signup />} /> */}
-        <Route path="/signup" element={ <Signup />} />
+        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <SignUp />} /> */}
+        <Route path="/signup" element={ <SignUp />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
