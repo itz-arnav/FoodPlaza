@@ -7,7 +7,8 @@ import { useAuth } from './context/AuthContext';
 import Login from './views/Login';
 import Home from './views/Home';
 import "./styles/App.css";
-import Signup from './views/SignUp';
+import SignUp from './views/SignUp';
+
 function App() {
   const { isAuthenticated } = useAuth();
 

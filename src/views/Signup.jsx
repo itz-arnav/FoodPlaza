@@ -1,9 +1,9 @@
 import React from 'react'
-import css from "../styles/Signup/Signup.module.css";
+import css from "../styles/SignUp/SignUp.module.css";
 import CompanyLogo from "/pad-thai.png";
 import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {
+const SignUp = () => {
 
     const navigate = useNavigate();
     const handleHomeClick = () => {
@@ -47,7 +47,7 @@ const Signup = () => {
                     </div>
                     <div className={css.signupSocialMedia}>
                         <div className={css.signUpSocialContainer}>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -57,4 +57,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default SignUp
