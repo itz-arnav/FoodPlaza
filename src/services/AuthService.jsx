@@ -1,6 +1,6 @@
 const AuthService = {
     async login(username, password) {
-      const response = await fetch('http://localhost:7777/api/auth/login', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ const AuthService = {
     },
 
     async signup(username, email, password) {
-      const response = await fetch('http://localhost:7777/api/auth/register', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/auth/register`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
