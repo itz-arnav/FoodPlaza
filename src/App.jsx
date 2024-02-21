@@ -16,10 +16,10 @@ function App() {
     <Router>
       <ToastContainer />
       <Routes>
-        {/* <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} /> */}
-        <Route path="/login" element={ <Login />} />
-        {/* <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <SignupPage />} /> */}
-        <Route path="/signup" element={ <SignupPage />} />
+        <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} />
+        {/* <Route path="/login" element={ <Login />} /> */}
+        <Route path="/signup" element={isAuthenticated ? <Navigate to="/" /> : <SignupPage />} />
+        {/* <Route path="/signup" element={ <SignupPage />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

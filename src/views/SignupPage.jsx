@@ -1,20 +1,43 @@
-import React from 'react'
+import { useState } from 'react'
 import css from "../styles/SignupPage/SignupPage.module.css";
+import  "../styles/toast.css";
 import CompanyLogo from "/pad-thai.png";
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignupPage = () => {
-
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
         navigate("/");
     }
 
-    const handleLoginCLick = () => {
+    const handleLoginClick = () => {
         navigate("/login");
     }
+
+    const { signup } = useAuth();
+    const handleSignup = async () => {
+        signup(username, email, password)
+            .then(() => {
+                navigate('/');
+                toast.success("Signup successful", {
+                position: "top-center",
+                })
+            })
+            .catch((error) => {
+                toast.error("Please enter a valid username, email and password", {
+                    position: "top-center",
+                })
+            })
+    }
+
+    const [username, setUserName] = useState();
+    const [password, setPassword] = useState();
+    const [email, setEmail] = useState();
+
 
     return (
         <div className={css.signupContainer}>
@@ -26,7 +49,7 @@ const SignupPage = () => {
                     </div>
                     <div className={css.headerLoginSection}>
                         <span className={css.greyedSmall}>Already have an account?</span>
-                        <div className={css.loginButton} onClick={handleLoginCLick}>Login</div>
+                        <div className={css.loginButton} onClick={handleLoginClick}>Login</div>
                     </div>
                 </div>
             </div>
@@ -36,16 +59,51 @@ const SignupPage = () => {
                     <div className={css.signupWrapperTitle}>
                         Sign Up
                     </div>
-                    <form action="" className={css.signupForm}>
+                    <form
+                        action=""
+                        className={css.signupForm}
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            handleSignup();
+                        }}
+                    >
                         <div className={css.signupInputfieldDiv}>
-                            <input type="email" className={css.signupInputField} name="email" placeholder='Email' />
+                            <input
+                                type="text"
+                                className={css.signupInputField}
+                                name="username"
+                                placeholder='Username'
+                                required
+                                value={username}
+                                onChange={(e) => setUserName(e.target.value)}
+                            />
                         </div>
 
                         <div className={css.signupInputfieldDiv}>
-                            <input type="password" className={css.signupInputField} name="password" placeholder='Password' />
+                            <input
+                                type="email"
+                                className={css.signupInputField}
+                                name="email"
+                                placeholder='Email'
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
 
-                        <button className={css.submitButton}>Sign up with email</button>
+                        <div className={css.signupInputfieldDiv}>
+                            <input
+                                type="password"
+                                className={css.signupInputField}
+                                name="password"
+                                placeholder='Password'
+                                required
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+
+                        <button type="submit" className={css.submitButton}>Sign up with email</button>
                     </form>
                     <div className={css.separateSection}>
                         <hr className={css.separateHR} />
@@ -58,7 +116,7 @@ const SignupPage = () => {
                             <div className={css.signupSocialText}>Sign up with Google</div>
                         </div>
                         <div className={css.signUpSocialContainer}>
-                        <svg className={css.socialSignupIcon} width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.55416 0.00332907L6.42212 0C4.02684 0 2.47891 1.54552 2.47891 3.93762V5.75313H0.335243C0.150004 5.75313 0 5.89927 0 6.07954V8.71001C0 8.89028 0.150175 9.03625 0.335243 9.03625H2.47891V15.6737C2.47891 15.854 2.62892 16 2.81416 16H5.61104C5.79628 16 5.94628 15.8539 5.94628 15.6737V9.03625H8.45273C8.63797 9.03625 8.78797 8.89028 8.78797 8.71001L8.789 6.07954C8.789 5.99299 8.75359 5.91009 8.69082 5.84884C8.62805 5.78758 8.54253 5.75313 8.45359 5.75313H5.94628V4.2141C5.94628 3.47438 6.12741 3.09886 7.11758 3.09886L8.55382 3.09836C8.73888 3.09836 8.88889 2.95222 8.88889 2.77211V0.329578C8.88889 0.149642 8.73905 0.00366197 8.55416 0.00332907Z" fill="#3B5998"></path></svg>
+                            <svg className={css.socialSignupIcon} width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.55416 0.00332907L6.42212 0C4.02684 0 2.47891 1.54552 2.47891 3.93762V5.75313H0.335243C0.150004 5.75313 0 5.89927 0 6.07954V8.71001C0 8.89028 0.150175 9.03625 0.335243 9.03625H2.47891V15.6737C2.47891 15.854 2.62892 16 2.81416 16H5.61104C5.79628 16 5.94628 15.8539 5.94628 15.6737V9.03625H8.45273C8.63797 9.03625 8.78797 8.89028 8.78797 8.71001L8.789 6.07954C8.789 5.99299 8.75359 5.91009 8.69082 5.84884C8.62805 5.78758 8.54253 5.75313 8.45359 5.75313H5.94628V4.2141C5.94628 3.47438 6.12741 3.09886 7.11758 3.09886L8.55382 3.09836C8.73888 3.09836 8.88889 2.95222 8.88889 2.77211V0.329578C8.88889 0.149642 8.73905 0.00366197 8.55416 0.00332907Z" fill="#3B5998"></path></svg>
                             <div className={css.signupSocialText}>Sign up with Facebook</div>
                         </div>
                     </div>

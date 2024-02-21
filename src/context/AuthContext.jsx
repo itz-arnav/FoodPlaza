@@ -25,6 +25,15 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const signup = async (username, email, password) => {
+    const result = await AuthService.signup(username, email, password);
+    if (result) {
+      setIsAuthenticated(true);
+    }else{
+      throw new Error('Login failed');
+    }
+  }
+
   const logout = () => {
     AuthService.logout();
     setIsAuthenticated(false);
@@ -33,6 +42,7 @@ export const AuthProvider = ({ children }) => {
   const value = {
     isAuthenticated,
     login,
+    signup,
     logout,
   };
 
