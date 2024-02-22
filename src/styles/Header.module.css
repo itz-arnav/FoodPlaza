@@ -153,16 +153,17 @@
     border-radius: 4px; /* Optional: Rounds the corners of the menu */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
     overflow: hidden; /* Ensures the border-radius clips the child elements */
+    user-select: none;
   }
   
   /* Styles for each menu item */
   .popoverMenuItem {
-    padding: 10px 20px; /* Adds some padding inside each menu item for spacing */
+    padding: 10px 50px; /* Adds some padding inside each menu item for spacing */
     cursor: pointer; /* Changes the cursor to indicate the item is clickable */
     color: #333333; /* Sets the text color for each item */
     border-bottom: 1px solid #eeeeee; /* Adds a separator between items */
   }
-  
+
   .popoverMenuItem:last-child {
     border-bottom: none; /* Removes the bottom border from the last item */
   }
@@ -171,5 +172,9 @@
   .popoverMenuItem:hover, .popoverMenuItem:focus {
     background-color: #f5f5f5; /* Changes the background on hover/focus for visual feedback */
     outline: none; /* Removes the outline to maintain the style */
+  }
+
+  .popoverMenuItem:active{
+    background-color: #fafafa;
   }
   
